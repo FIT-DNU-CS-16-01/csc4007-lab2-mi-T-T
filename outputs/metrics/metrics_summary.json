@@ -1,0 +1,90 @@
+{
+  "dataset": "imdb",
+  "dataset_path": null,
+  "seed": 42,
+  "vectorizer": "tfidf",
+  "model": "logreg",
+  "max_features": 20000,
+  "ngram_max": 2,
+  "replace_number": false,
+  "drop_punct": false,
+  "splits": {
+    "train": 40000,
+    "val": 5000,
+    "test": 5000
+  },
+  "val": {
+    "accuracy": 0.9074,
+    "macro_f1": 0.9073968848312057,
+    "weighted_f1": 0.907396884831206,
+    "labels": [
+      "negative",
+      "positive"
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.9121813031161473,
+        "recall": 0.9016,
+        "f1-score": 0.9068597867632268,
+        "support": 2500.0
+      },
+      "positive": {
+        "precision": 0.9027283511269276,
+        "recall": 0.9132,
+        "f1-score": 0.9079339828991847,
+        "support": 2500.0
+      },
+      "accuracy": 0.9074,
+      "macro avg": {
+        "precision": 0.9074548271215375,
+        "recall": 0.9074,
+        "f1-score": 0.9073968848312057,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.9074548271215376,
+        "recall": 0.9074,
+        "f1-score": 0.907396884831206,
+        "support": 5000.0
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.9064,
+    "macro_f1": 0.9063856058507556,
+    "weighted_f1": 0.9063856058507558,
+    "labels": [
+      "negative",
+      "positive"
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.916735028712059,
+        "recall": 0.894,
+        "f1-score": 0.905224787363305,
+        "support": 2500.0
+      },
+      "positive": {
+        "precision": 0.8965651834504293,
+        "recall": 0.9188,
+        "f1-score": 0.9075464243382062,
+        "support": 2500.0
+      },
+      "accuracy": 0.9064,
+      "macro avg": {
+        "precision": 0.9066501060812442,
+        "recall": 0.9064,
+        "f1-score": 0.9063856058507556,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.9066501060812443,
+        "recall": 0.9064,
+        "f1-score": 0.9063856058507558,
+        "support": 5000.0
+      }
+    }
+  },
+  "generated_at": "2026-04-14T04:40:35.674118+00:00",
+  "notes": "Split trước, fit vectorizer trên train, evaluate trên val/test để tránh leakage."
+}
